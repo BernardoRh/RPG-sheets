@@ -1,0 +1,176 @@
+[gd_scene load_steps=6 format=3 uid="uid://dqb6em6p6h2js"]
+
+[ext_resource type="FontFile" uid="uid://chbgphqte6pis" path="res://Fonts/JMH Typewriter.ttf" id="1_itvlv"]
+[ext_resource type="Texture2D" uid="uid://bmmkwdthe8i6m" path="res://SelectCharacter/AddCharacter.svg" id="2_6ln1l"]
+
+[sub_resource type="Theme" id="Theme_4uauy"]
+default_font = ExtResource("1_itvlv")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kv6de"]
+bg_color = Color(0.298039, 0.298039, 0.298039, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_23mc8"]
+bg_color = Color(0.299547, 0.299547, 0.299547, 1)
+
+[node name="SelectCharacter" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 92
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer"]
+layout_mode = 2
+theme = SubResource("Theme_4uauy")
+
+[node name="HFlowContainer" type="HFlowContainer" parent="MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 64
+theme_override_constants/v_separation = 24
+alignment = 1
+last_wrap_alignment = 1
+
+[node name="CharacterPanel" type="Panel" parent="MarginContainer/ScrollContainer/HFlowContainer"]
+custom_minimum_size = Vector2(192, 224)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kv6de")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/ScrollContainer/HFlowContainer/CharacterPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer/HFlowContainer/CharacterPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="HFlowContainer" type="HFlowContainer" parent="MarginContainer/ScrollContainer/HFlowContainer/CharacterPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 16
+alignment = 1
+
+[node name="FOR" type="Label" parent="MarginContainer/ScrollContainer/HFlowContainer/CharacterPanel/MarginContainer/VBoxContainer/HFlowContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_vertical = 10
+text = "FOR: 100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TAM" type="Label" parent="MarginContainer/ScrollContainer/HFlowContainer/CharacterPanel/MarginContainer/VBoxContainer/HFlowContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_vertical = 10
+text = "TAM: 100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CON" type="Label" parent="MarginContainer/ScrollContainer/HFlowContainer/CharacterPanel/MarginContainer/VBoxContainer/HFlowContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_vertical = 10
+text = "CON: 100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="POD" type="Label" parent="MarginContainer/ScrollContainer/HFlowContainer/CharacterPanel/MarginContainer/VBoxContainer/HFlowContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_vertical = 10
+text = "POD: 100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="INT" type="Label" parent="MarginContainer/ScrollContainer/HFlowContainer/CharacterPanel/MarginContainer/VBoxContainer/HFlowContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_vertical = 10
+text = "INT: 100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EDU" type="Label" parent="MarginContainer/ScrollContainer/HFlowContainer/CharacterPanel/MarginContainer/VBoxContainer/HFlowContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_vertical = 10
+text = "EDU: 100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="APA" type="Label" parent="MarginContainer/ScrollContainer/HFlowContainer/CharacterPanel/MarginContainer/VBoxContainer/HFlowContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_vertical = 10
+text = "APA: 100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Name" type="Label" parent="MarginContainer/ScrollContainer/HFlowContainer/CharacterPanel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_vertical = 10
+text = "Maria"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuContainerPanel" type="Panel" parent="."]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.904
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 0.159973
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_23mc8")
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuContainerPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuContainerPanel/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="CharacterStatsContainer" type="MarginContainer" parent="MenuContainerPanel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_right = 16
+
+[node name="CharacterStats" type="Button" parent="MenuContainerPanel/MarginContainer/HBoxContainer/CharacterStatsContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+icon = ExtResource("2_6ln1l")
+flat = true
+icon_alignment = 1

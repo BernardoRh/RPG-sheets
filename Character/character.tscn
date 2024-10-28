@@ -1,0 +1,121 @@
+[gd_scene load_steps=7 format=3 uid="uid://brbhslsymhyeg"]
+
+[ext_resource type="Texture2D" uid="uid://bfebmvihbi5j" path="res://Character/ChangeCharacter.svg" id="1_auuwi"]
+[ext_resource type="Texture2D" uid="uid://bed2uulb70owe" path="res://Character/Character.svg" id="2_c4064"]
+[ext_resource type="Texture2D" uid="uid://drkqlebhpy2jo" path="res://Character/NotesAndHistory.svg" id="3_tw4rk"]
+[ext_resource type="Texture2D" uid="uid://dqnqobyik21y7" path="res://Character/Equipment.svg" id="4_ofp88"]
+[ext_resource type="Texture2D" uid="uid://lxu035jjx5lt" path="res://Character/Save.svg" id="5_qj1bx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1wuw3"]
+bg_color = Color(0.299547, 0.299547, 0.299547, 1)
+
+[node name="Character" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+
+[node name="MainVBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="MenuContainerPanel" type="Panel" parent="."]
+show_behind_parent = true
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.904
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 0.159973
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1wuw3")
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuContainerPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuContainerPanel/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="ChangeCharacterContainer" type="MarginContainer" parent="MenuContainerPanel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_right = 16
+
+[node name="ChangeCharacter" type="Button" parent="MenuContainerPanel/MarginContainer/HBoxContainer/ChangeCharacterContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+icon = ExtResource("1_auuwi")
+flat = true
+icon_alignment = 1
+
+[node name="CharacterStatsContainer" type="MarginContainer" parent="MenuContainerPanel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_right = 16
+
+[node name="CharacterStats" type="Button" parent="MenuContainerPanel/MarginContainer/HBoxContainer/CharacterStatsContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+icon = ExtResource("2_c4064")
+flat = true
+icon_alignment = 1
+
+[node name="AditionalInformationContainer" type="MarginContainer" parent="MenuContainerPanel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_right = 16
+
+[node name="AditionalInformation" type="Button" parent="MenuContainerPanel/MarginContainer/HBoxContainer/AditionalInformationContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+icon = ExtResource("3_tw4rk")
+flat = true
+icon_alignment = 1
+
+[node name="GoodsAndEquipmentContainer" type="MarginContainer" parent="MenuContainerPanel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_right = 16
+
+[node name="GoodsAndEquipment" type="Button" parent="MenuContainerPanel/MarginContainer/HBoxContainer/GoodsAndEquipmentContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+icon = ExtResource("4_ofp88")
+flat = true
+icon_alignment = 1
+
+[node name="SaveContainer" type="MarginContainer" parent="MenuContainerPanel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_right = 16
+
+[node name="Save" type="Button" parent="MenuContainerPanel/MarginContainer/HBoxContainer/SaveContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+icon = ExtResource("5_qj1bx")
+flat = true
+icon_alignment = 1

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhv5ydoulfu3i"]
+
+[ext_resource type="PackedScene" uid="uid://dqb6em6p6h2js" path="res://SelectCharacter/select_character.tscn" id="1_ncr8h"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SelectCharacter" parent="." instance=ExtResource("1_ncr8h")]
+layout_mode = 1

@@ -1,0 +1,292 @@
+{
+	"character": [
+		{
+			"name": "nameOfTheCharacter",
+			"ocupation": "ocupationOfTheCharacter",
+			"skills": [
+				{
+					"name": "Antropologia (01%)",
+					"skillName": "antropology",
+					"baseValue": 1,
+					"value": 0
+				},
+				{
+					"name": "Armas de Fogo (Pistolas) (20%)",
+					"skillName": "weaponsPistols",
+					"baseValue": 20,
+					"value": 0
+				},
+				{
+					"name": "Armas de Fogo (Rifles/Espingardas) (25%)",
+					"skillName": "weaponsRiflesShotguns",
+					"baseValue": 25,
+					"value": 0
+				},
+				{
+					"name": "Arqueologia (01%)",
+					"skillName": "arqueology",
+					"baseValue": 1,
+					"value": 0
+				},
+				{
+					"name": "Arremessar (20%)",
+					"skillName": "throwables",
+					"baseValue": 20,
+					"value": 0
+				},
+				{
+					"name": "Arte e Ofício (05%)",
+					"skillName": "artCraft",
+					"baseValue": 5,
+					"value": 0,
+					"aditionalValue": ""
+				},
+				{
+					"name": "Avaliação (05%)",
+					"skillName": "avaliation",
+					"baseValue": 5,
+					"value": 0
+				},
+				{
+					"name": "Cavalgar (05%)",
+					"skillName": "horseRiding",
+					"baseValue": 5,
+					"value": 0
+				},
+				{
+					"name": "Charme (15%)",
+					"skillName": "charm",
+					"baseValue": 15,
+					"value": 0
+				},
+				{
+					"name": "Chaveiro (01%)",
+					"skillName": "locksmith",
+					"baseValue": 1,
+					"value": 0
+				},
+				{
+					"name": "Ciência (01%)",
+					"skillName": "cience",
+					"baseValue": 1,
+					"value": 0,
+					"aditionalValue": ""
+				},
+				{
+					"name": "Consertos Elét. (10%)",
+					"skillName": "eletricRepairs",
+					"baseValue": 10,
+					"value": 0
+				},
+				{
+					"name": "Consertos Mec. (10%)",
+					"skillName": "mechanicRepairs",
+					"baseValue": 10,
+					"value": 0
+				},
+				{
+					"name": "Contabilidade (05%)",
+					"skillName": "accounting",
+					"baseValue": 5,
+					"value": 0
+				},
+				{
+					"name": "Direito (05%)",
+					"skillName": "law",
+					"baseValue": 5,
+					"value": 0
+				},
+				{
+					"name": "Dirigir Autom. (20%)",
+					"skillName": "drive",
+					"baseValue": 20,
+					"value": 0
+				},
+				{
+					"name": "Disfarce (05%)",
+					"skillName": "disguise",
+					"baseValue": 5,
+					"value": 0
+				},
+				{
+					"name": "Encontrar (25%)",
+					"skillName": "find",
+					"baseValue": 25,
+					"value": 0
+				},
+				{
+					"name": "Escalar (20%)",
+					"skillName": "climb",
+					"baseValue": 20,
+					"value": 0
+				},
+				{
+					"name": "Escutar (20%)",
+					"skillName": "hear",
+					"baseValue": 20,
+					"value": 0
+				},
+				{
+					"name": "Esquivar (Metade da Des)",
+					"skillName": "dodge",
+					"baseValue": 0,
+					"value": 0
+				},
+				{
+					"name": "Furtividade (20%)",
+					"skillName": "stealth",
+					"baseValue": 20,
+					"value": 0
+				},
+				{
+					"name": "História (20%)",
+					"skillName": "history",
+					"baseValue": 20,
+					"value": 0
+				},
+				{
+					"name": "Intimidação (15%)",
+					"skillName": "intimidation",
+					"baseValue": 25,
+					"value": 0
+				},
+				{
+					"name": "Lábia (05%)",
+					"skillName": "smoothTalk",
+					"baseValue": 5,
+					"value": 0
+				},
+				{
+					"name": "Língua (Nativa) (EDU)",
+					"skillName": "nativeLanguage",
+					"baseValue": 0,
+					"value": 0,
+					"aditionalValue": ""
+				},
+				{
+					"name": "Língua (Outra) (01%)",
+					"skillName": "otherLanguage",
+					"baseValue": 1,
+					"value": 0,
+					"aditionalValue": ""
+				},
+				{
+					"name": "Lutar (Briga) (25%)",
+					"skillName": "fight",
+					"baseValue": 25,
+					"value": 0
+				},
+				{
+					"name": "Medicina (01%)",
+					"skillName": "medicine",
+					"baseValue": 1,
+					"value": 0
+				},
+				{
+					"name": "Mythos de Cthulhu (00%)",
+					"skillName": "mythos",
+					"baseValue": 0,
+					"value": 0
+				},
+				{
+					"name": "Mundo Natural (10%)",
+					"skillName": "naturalWorld",
+					"baseValue": 10,
+					"value": 0
+				},
+				{
+					"name": "Natação (10%)",
+					"skillName": "swim",
+					"baseValue": 10,
+					"value": 0
+				},
+				{
+					"name": "Navegação (10%)",
+					"skillName": "sailing",
+					"baseValue": 10,
+					"value": 0
+				},
+				{
+					"name": "Nível de Crédito (00%)",
+					"skillName": "creaditLevel",
+					"baseValue": 0,
+					"value": 0
+				},
+				{
+					"name": "Ocultismo (05%)",
+					"skillName": "ocultism",
+					"baseValue": 5,
+					"value": 0
+				},
+				{
+					"name": "Op. Maquinário (01%)",
+					"skillName": "operateMachinery",
+					"baseValue": 1,
+					"value": 0
+				},
+				{
+					"name": "Persuasão (10%)",
+					"skillName": "persuasion",
+					"baseValue": 10,
+					"value": 0
+				},
+				{
+					"name": "Pilotar (01%)",
+					"skillName": "pilot",
+					"baseValue": 0,
+					"value": 0,
+					"aditionalValue": ""
+				},
+				{
+					"name": "Prestidigitação (10%)",
+					"skillName": "sleightOfHand",
+					"baseValue": 10,
+					"value": 0
+				},
+				{
+					"name": "Primeiros Socorros (30%)",
+					"skillName": "firstAid",
+					"baseValue": 30,
+					"value": 0
+				},
+				{
+					"name": "Psicanálise (01%)",
+					"skillName": "psychoanalysis",
+					"baseValue": 1,
+					"value": 0
+				},
+				{
+					"name": "Psicologia (01%)",
+					"skillName": "track",
+					"baseValue": 1,
+					"value": 0
+				},
+				{
+					"name": "Ratrear (10%)",
+					"skillName": "",
+					"baseValue": 0,
+					"value": 0
+				},
+				{
+					"name": "Saltar (20%)",
+					"skillName": "",
+					"baseValue": 0,
+					"value": 0
+				},
+				{
+					"name": "Sobrevivência (10%)",
+					"skillName": "",
+					"baseValue": 0,
+					"value": 0
+				},
+				{
+					"name": "Usar Bibliotecas (20%)",
+					"skillName": "",
+					"baseValue": 0,
+					"value": 0
+				},
+			],
+			
+		}
+	]
+}
