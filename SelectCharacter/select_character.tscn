@@ -1,13 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dqb6em6p6h2js"]
+[gd_scene load_steps=5 format=3 uid="uid://dqb6em6p6h2js"]
 
 [ext_resource type="FontFile" uid="uid://chbgphqte6pis" path="res://Fonts/JMH Typewriter.ttf" id="1_itvlv"]
 [ext_resource type="Texture2D" uid="uid://bmmkwdthe8i6m" path="res://SelectCharacter/AddCharacter.svg" id="2_6ln1l"]
 
 [sub_resource type="Theme" id="Theme_4uauy"]
 default_font = ExtResource("1_itvlv")
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kv6de"]
-bg_color = Color(0.298039, 0.298039, 0.298039, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_23mc8"]
 bg_color = Color(0.299547, 0.299547, 0.299547, 1)
@@ -20,82 +17,166 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = -120.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_4uauy")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 92
 
-[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer"]
+[node name="VFlowContainer" type="VFlowContainer" parent="ScrollContainer/MarginContainer"]
+layout_direction = 1
 layout_mode = 2
-theme = SubResource("Theme_4uauy")
-
-[node name="HFlowContainer" type="HFlowContainer" parent="MarginContainer/ScrollContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/h_separation = 64
-theme_override_constants/v_separation = 24
-alignment = 1
+size_flags_horizontal = 4
 last_wrap_alignment = 1
+reverse_fill = true
 
-[node name="CharacterPanel" type="Panel" parent="MarginContainer/ScrollContainer/HFlowContainer"]
-custom_minimum_size = Vector2(192, 224)
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/MarginContainer/VFlowContainer"]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_kv6de")
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/ScrollContainer/HFlowContainer/CharacterPanel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 8
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer/HFlowContainer/CharacterPanel/MarginContainer"]
-layout_mode = 2
-
-[node name="HFlowContainer" type="HFlowContainer" parent="MarginContainer/ScrollContainer/HFlowContainer/CharacterPanel/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/h_separation = 16
-theme_override_constants/v_separation = 16
 alignment = 1
 
-[node name="FOR" type="Label" parent="MarginContainer/ScrollContainer/HFlowContainer/CharacterPanel/MarginContainer/VBoxContainer/HFlowContainer"]
+[node name="Name" type="Label" parent="ScrollContainer/MarginContainer/VFlowContainer/HBoxContainer"]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 size_flags_vertical = 10
-text = "FOR: 100"
+text = "Nome:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TAM" type="Label" parent="MarginContainer/ScrollContainer/HFlowContainer/CharacterPanel/MarginContainer/VBoxContainer/HFlowContainer"]
+[node name="TextEdit" type="TextEdit" parent="ScrollContainer/MarginContainer/VFlowContainer/HBoxContainer"]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+context_menu_enabled = false
+shortcut_keys_enabled = false
+drag_and_drop_selection_enabled = false
+autowrap_mode = 1
+scroll_fit_content_height = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/MarginContainer/VFlowContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Ocupation" type="Label" parent="ScrollContainer/MarginContainer/VFlowContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 size_flags_vertical = 10
+text = "Ocupação:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="ScrollContainer/MarginContainer/VFlowContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+context_menu_enabled = false
+shortcut_keys_enabled = false
+drag_and_drop_selection_enabled = false
+scroll_fit_content_height = true
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="ScrollContainer/MarginContainer/VFlowContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Name" type="Label" parent="ScrollContainer/MarginContainer/VFlowContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_vertical = 10
+text = "Name:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="ScrollContainer/MarginContainer/VFlowContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+context_menu_enabled = false
+shortcut_keys_enabled = false
+drag_and_drop_selection_enabled = false
+scroll_fit_content_height = true
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="ScrollContainer/MarginContainer/VFlowContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Name" type="Label" parent="ScrollContainer/MarginContainer/VFlowContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_vertical = 10
+text = "Name:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="ScrollContainer/MarginContainer/VFlowContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+context_menu_enabled = false
+shortcut_keys_enabled = false
+drag_and_drop_selection_enabled = false
+scroll_fit_content_height = true
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="ScrollContainer/MarginContainer/VFlowContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Name" type="Label" parent="ScrollContainer/MarginContainer/VFlowContainer/HBoxContainer5"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_vertical = 10
+text = "Name:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="ScrollContainer/MarginContainer/VFlowContainer/HBoxContainer5"]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+context_menu_enabled = false
+shortcut_keys_enabled = false
+drag_and_drop_selection_enabled = false
+scroll_fit_content_height = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer/VFlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FOR" type="Label" parent="ScrollContainer/MarginContainer/VFlowContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_vertical = 8
+text = "FOR: 100"
+vertical_alignment = 1
+
+[node name="TAM" type="Label" parent="ScrollContainer/MarginContainer/VFlowContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_vertical = 8
 text = "TAM: 100"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CON" type="Label" parent="MarginContainer/ScrollContainer/HFlowContainer/CharacterPanel/MarginContainer/VBoxContainer/HFlowContainer"]
+[node name="CON" type="Label" parent="ScrollContainer/MarginContainer/VFlowContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
-size_flags_vertical = 10
+size_flags_vertical = 8
 text = "CON: 100"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="POD" type="Label" parent="MarginContainer/ScrollContainer/HFlowContainer/CharacterPanel/MarginContainer/VBoxContainer/HFlowContainer"]
+[node name="POD" type="Label" parent="ScrollContainer/MarginContainer/VFlowContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 size_flags_vertical = 10
@@ -103,7 +184,7 @@ text = "POD: 100"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="INT" type="Label" parent="MarginContainer/ScrollContainer/HFlowContainer/CharacterPanel/MarginContainer/VBoxContainer/HFlowContainer"]
+[node name="INT" type="Label" parent="ScrollContainer/MarginContainer/VFlowContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 size_flags_vertical = 10
@@ -111,7 +192,7 @@ text = "INT: 100"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="EDU" type="Label" parent="MarginContainer/ScrollContainer/HFlowContainer/CharacterPanel/MarginContainer/VBoxContainer/HFlowContainer"]
+[node name="EDU" type="Label" parent="ScrollContainer/MarginContainer/VFlowContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 size_flags_vertical = 10
@@ -119,19 +200,11 @@ text = "EDU: 100"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="APA" type="Label" parent="MarginContainer/ScrollContainer/HFlowContainer/CharacterPanel/MarginContainer/VBoxContainer/HFlowContainer"]
+[node name="APA" type="Label" parent="ScrollContainer/MarginContainer/VFlowContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 size_flags_vertical = 10
 text = "APA: 100"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Name" type="Label" parent="MarginContainer/ScrollContainer/HFlowContainer/CharacterPanel/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 32)
-layout_mode = 2
-size_flags_vertical = 10
-text = "Maria"
 horizontal_alignment = 1
 vertical_alignment = 1
 
