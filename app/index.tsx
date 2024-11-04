@@ -1,9 +1,13 @@
 import { NavigationContainer } from "@react-navigation/native";
-import { Text, View } from "react-native";
+import React from 'react';
+import { Text, TextInput, View } from "react-native";
 
 export default function Index() {
+
+  const [characterName, setCharacterName] = React.useState('')
+
   return (
-    <NavigationContainer>
+    <NavigationContainer independent={true}>
       <View
         style={{
           flex: 1,
@@ -11,7 +15,12 @@ export default function Index() {
           alignItems: "center",
         }}
       >
-        <Text>Edit app/index.tsx to edit this screen.</Text>
+         <TextInput
+          onChangeText={setCharacterName}
+          value={characterName}
+          placeholder="Nome do Personagem"
+        />
+        
       </View>
     </NavigationContainer>
   );
