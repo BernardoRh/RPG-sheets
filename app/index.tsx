@@ -1,10 +1,9 @@
+import CharacterCreator from "@/pages/CharacterCreator";
 import { NavigationContainer } from "@react-navigation/native";
 import React from 'react';
-import { Text, TextInput, View } from "react-native";
+import { TextInput, View } from "react-native";
 
 export default function Index() {
-
-  const [characterName, setCharacterName] = React.useState('')
 
   return (
     <NavigationContainer independent={true}>
@@ -15,12 +14,7 @@ export default function Index() {
           alignItems: "center",
         }}
       >
-         <TextInput
-          onChangeText={setCharacterName}
-          value={characterName}
-          placeholder="Nome do Personagem"
-        />
-        
+        <CharacterCreator/>
       </View>
     </NavigationContainer>
   );
