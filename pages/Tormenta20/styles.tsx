@@ -1,21 +1,29 @@
-import styled from "styled-components/native"
+import { Button } from "react-native"
+import styled from "rn-css"
 
 export const T20Container = styled.View`
-    width: 275;
-    height: 275;
     justify-content: center;
-    justify-items: center;
+    align-items: center;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: 0.3s;
 `
 export const Logo = styled.Image`
-    width: 250;
-    height: 250;
-    resizeMode: contain;
-`
-
-export const BackgroundImage = styled.ImageBackground`
-    width: 275;
-    height: 275;
+    width: 15rem;
+    height: 18rem;
     resizeMode: contain;
     position: absolute;
-    z-index: -1;
+    z-index: 1;
+    transition: 0.3s;
+    &:hover{
+        width: 16rem;
+    }
+`
+
+export const BackgroundImage = styled.Image`
+    width: 18rem;
+    height: 18rem;
+    border-radius: 16px;
+    transition: 0.3s;
+    
 `
